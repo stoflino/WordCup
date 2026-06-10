@@ -23,6 +23,8 @@ function RulesContent() {
           <p>Každý hráč tipuje přesný výsledek každého zápasu (góly obou týmů)</p>
           <p>Tip lze upravit pouze do začátku zápasu</p>
           <p>Po začátku zápasu je tip uzamčen</p>
+          <p>Výsledek zápasu je skore po konci hrací doby</p>
+          <p>Vyhodnocení zápasů není hned</p>
         </RuleSection>
 
         <RuleSection title="Bodování">
