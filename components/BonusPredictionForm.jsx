@@ -36,7 +36,7 @@ export default function BonusPredictionForm({ bonus, onSave, saving }) {
     <section className={`card mx-auto w-full max-w-md p-8 ${locked ? 'opacity-70' : ''}`}>
       <h2 className="text-lg font-semibold text-gray-900">Bonusové tipy</h2>
       <p className="mt-2 text-sm text-gray-500">
-        Vítěz turnaje (+10 bodů) · Nejlepší střelec (góly v turnaji)
+        Vítěz turnaje (+10 bodů), Nejlepší střelec (+ ? bodů)
       </p>
       <p className="mt-1 text-xs text-gray-400">Uzávěrka: {deadlineLabel}</p>
 
@@ -66,6 +66,9 @@ export default function BonusPredictionForm({ bonus, onSave, saving }) {
             placeholder="Např. Brazílie"
             className="input-field w-full"
           />
+          <label htmlFor="player" className="mt-1 text-xs text-gray-400">
+            Dostaneš 10 bodů, když tvůj tým vyhraje wordcup.
+          </label>
         </div>
 
         <div>
@@ -81,6 +84,9 @@ export default function BonusPredictionForm({ bonus, onSave, saving }) {
             placeholder="Např. Messi"
             className="input-field w-full"
           />
+          <label htmlFor="player" className="mt-1 text-xs text-gray-400">
+            Dostaneš tolik bodů, kolik dá v turnaji gólů. (Hráč nemusí být nejlepší střelec turnaje.)
+          </label>
         </div>
 
         <button
