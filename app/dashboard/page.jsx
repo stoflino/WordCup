@@ -83,6 +83,14 @@ export default function DashboardPage() {
   };
 
   return (
+    <div style={{ padding: 20 }}>
+      <h1>DASHBOARD FUNGUJE ✅</h1>
+      <p>Pokud tohle vidíš, routing je OK.</p>
+    </div>
+  );
+
+  //
+return (
     <AuthGuard>
       <div className="mb-10">
         <h1 className="text-2xl font-bold text-gray-900">Matches</h1>
@@ -113,5 +121,5 @@ export default function DashboardPage() {
         </div>
       )}
     </AuthGuard>
-  );
+  );//
 }
