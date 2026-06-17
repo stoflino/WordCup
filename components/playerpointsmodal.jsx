@@ -11,7 +11,7 @@ export default function PlayerPointsModal({ userId, userName, onClose }) {
   useEffect(() => {
     if (!userId) return;
  
-    let active = true;
+    let active = true; 
  
     async function load() {
       setLoading(true);
