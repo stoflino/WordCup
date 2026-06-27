@@ -283,12 +283,14 @@ export default function PlayerPointsModal({ userId, userName, onClose }) {
             </div>
             <div className="flex items-center justify-between">
               <span className="text-sm text-gray-500">
-                {scorerName ? `Střelec: ${scorerName}` : 'Celkem za střelce'}
+                Celkem za střelce{scorerName ? `: ${scorerName}` : ''}
               </span>
               <span className="text-sm font-bold text-gray-900">{scorerPoints} b.</span>
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-sm text-gray-500">Celkem za vítěze</span>
+              <span className="text-sm text-gray-500">
+                Celkem za vítěze{winnerTeamName ? `: ${winnerTeamName}` : ''}
+              </span>
               <span className="text-sm font-bold text-gray-900">{winnerPoints} b.</span>
             </div>
           </div>
