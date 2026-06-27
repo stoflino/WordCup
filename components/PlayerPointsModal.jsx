@@ -1,5 +1,3 @@
-
-
 'use client';
  
 import { useEffect, useState } from 'react';
@@ -103,10 +101,10 @@ export default function PlayerPointsModal({ userId, userName, onClose }) {
       onClick={onClose}
     >
       <div
-        className="card max-h-[80vh] w-full max-w-md overflow-hidden"
+        className="card flex max-h-[90vh] w-full max-w-md flex-col overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center justify-between border-b border-gray-100 px-6 py-4">
+        <div className="flex shrink-0 items-center justify-between border-b border-gray-100 px-6 py-4">
           <div>
             <h3 className="text-lg font-semibold text-gray-900">{userName}</h3>
             <p className="text-sm text-gray-500">Body podle zápasů</p>
@@ -120,7 +118,7 @@ export default function PlayerPointsModal({ userId, userName, onClose }) {
           </button>
         </div>
  
-        <div className="max-h-[55vh] overflow-y-auto">
+        <div className="flex-1 overflow-y-auto">
           {loading ? (
             <p className="p-6 text-sm text-gray-500">Načítám…</p>
           ) : rows.length === 0 ? (
@@ -150,7 +148,7 @@ export default function PlayerPointsModal({ userId, userName, onClose }) {
         </div>
  
         {!loading && rows.length > 0 && (
-          <div className="space-y-2 border-t border-gray-100 px-6 py-4">
+          <div className="shrink-0 space-y-2 border-t border-gray-100 px-6 py-4">
             <div className="flex items-center justify-between">
               <span className="text-sm text-gray-500">Celkem ze zápasů</span>
               <span className="text-sm font-bold text-gray-900">{totalShown} b.</span>
